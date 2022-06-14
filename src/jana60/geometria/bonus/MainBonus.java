@@ -10,15 +10,23 @@ public class MainBonus {
 
 		Scanner scan = new Scanner(System.in);
 		RettangoloBonus ret = new RettangoloBonus();
+		RettangoloBonus rett = new RettangoloBonus();
 		int retGrande = 0;
 
 		for (int i = 0; i < 5; i++) {
-			System.out.println("Scrivimi il valore della base di un rettangolo: ");
+			System.out.println("Rettangolo " + (i + 1));
+			System.out.println("base: ");
 			ret.base = scan.nextInt();
-			System.out.println("Scrivimi il valore dell'altezza di un rettangolo: ");
+			System.out.println("altezza: ");
 			ret.altezza = scan.nextInt();
+			if (ret.calcoloArea() >= retGrande) {
+				retGrande = ret.calcoloArea();
+				rett.altezza = ret.altezza;
+				rett.base = ret.base;
+
+			}
 		}
-		System.out.println("L'area del rettangolo più grande è: " + ret.calcoloArea());
+		System.out.println("L'area del rettangolo più grande è: " + rett.calcoloArea());
 	}
 
 }

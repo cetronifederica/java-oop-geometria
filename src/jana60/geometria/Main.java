@@ -18,6 +18,8 @@ public class Main {
 
 		System.out.println("Il perimetro del rettangolo è: " + ret.calcolaPerimetro());
 		System.out.println("L'area del rettangolo è: " + ret.calcoloArea());
+
+		scan.close();
 	}
 
 }
