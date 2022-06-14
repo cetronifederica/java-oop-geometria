@@ -1,4 +1,4 @@
-package jana60.geometria.bonus;
+package jana60.geometria;
 
 import java.util.Scanner;
 
@@ -9,8 +9,8 @@ public class MainBonus {
 		// stampare a video l'area del rettangolo più grande
 
 		Scanner scan = new Scanner(System.in);
-		RettangoloBonus ret = new RettangoloBonus();
-		RettangoloBonus rett = new RettangoloBonus();
+		Rettangolo ret = new Rettangolo();
+		Rettangolo rett = new Rettangolo();
 		int retGrande = 0;
 
 		for (int i = 0; i < 5; i++) {
