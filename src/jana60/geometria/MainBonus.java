@@ -10,8 +10,8 @@ public class MainBonus {
 
 		Scanner scan = new Scanner(System.in);
 		Rettangolo ret = new Rettangolo();
-		Rettangolo rett = new Rettangolo();
-		int retGrande = 0;
+		Rettangolo rettMax = new Rettangolo();
+		int retGrande = 0; // in questo modo partirà sempre da zero
 
 		for (int i = 0; i < 5; i++) {
 			System.out.println("Rettangolo " + (i + 1));
@@ -21,12 +21,14 @@ public class MainBonus {
 			ret.altezza = scan.nextInt();
 			if (ret.calcoloArea() >= retGrande) {
 				retGrande = ret.calcoloArea();
-				rett.altezza = ret.altezza;
-				rett.base = ret.base;
+				rettMax.altezza = ret.altezza;
+				rettMax.base = ret.base;
 
 			}
 		}
-		System.out.println("L'area del rettangolo più grande è: " + rett.calcoloArea());
+		System.out.println("L'area del rettangolo più grande è: " + rettMax.calcoloArea());
+
+		scan.close();
 	}
 
 }
